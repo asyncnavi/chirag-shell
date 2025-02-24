@@ -3,17 +3,13 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"github.com/asyncnavi/chirag-shell/internal/buitlins"
 	"github.com/asyncnavi/chirag-shell/internal/executor"
 	"os"
 	"os/exec"
-	"runtime"
 )
 
 func init() {
-
-	osName := runtime.GOOS
-
-	fmt.Println(osName)
 	showDir := exec.Command("pwd")
 	showDir.Stdout = os.Stdout
 
@@ -26,6 +22,10 @@ func init() {
 func main() {
 	reader := bufio.NewReader(os.Stdin)
 	for {
+
+		// Prints shell header ( with os name, current working directory)
+		builtins.PrintShellHeader()
+
 		fmt.Print("🪔 ")
 		input, err := reader.ReadString('\n')
 		if err != nil {

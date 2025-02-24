@@ -6,14 +6,21 @@
         <entry key="file://$PROJECT_DIR$/cmd/repl/main.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1740391405387" />
+              <option name="lastModified" value="1740417770047" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/internal/buitlins/builtins.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1740418439488" />
             </ScannedPath>
           </value>
         </entry>
         <entry key="file://$PROJECT_DIR$/internal/executor/executor.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1740390873067" />
+              <option name="lastModified" value="1740418276222" />
             </ScannedPath>
           </value>
         </entry>

@@ -28,6 +28,16 @@ func ExecuteInput(input string) error {
 		ExitShell()
 	}
 
+	if tokens[0] == "cd" {
+		if len(tokens) < 2 {
+			return fmt.Errorf("cd: missing argumnent")
+		}
+		if err := os.Chdir(tokens[1]); err != nil {
+			return fmt.Errorf("cd %v", err)
+		}
+		return nil
+	}
+
 	cmd := exec.Command(tokens[0], tokens[1:]...)
 	cmd.Stderr = os.Stderr
 	cmd.Stdout = os.Stdout
